@@ -10,24 +10,14 @@ html(lang="en")
         header
             h1 Zooom
         main
-            div#welcome
-                form
-                    input#roomName(placeholder="room name", required, type="text")
-                    input#name(placeholder="nickname", required, type="text")
-                    button Enter Room
-                h4 Open Rooms: 
-                ul
-                    
-            div#room
-                h3
-                ul
-                form#name
-                    input(placeholder="nickname", required, type="text")
-                    button Change
-                form#msg
-                    input(placeholder="message", required, type="text")
-                    button Send
-                    
+            div#myStream
+                video#myFace(autoplay,playsinline,width="400",height="400")
+                button#mute Mute
+                button#camera Turn camera off    
+                select#cameras 
+                    option(value="device") Face Camera
+                select#audios
+                    option(value="device") Audio
         script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
             
